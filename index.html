@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b934b399f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Social Media</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><i class="fas fa-home"></i>GO SOCIAL</a>
+          </li>
+          <li>
+            <i
+              onclick="displayElement(menu, 'visibility')"
+              class="fas fa-bars"
+            ></i>
+            <ul id="menu">
+              <li>
+                <a href="#" title="news"
+                  ><i class="fas fa-globe-americas"></i><span>news</span></a
+                >
+              </li>
+              <li>
+                <a href="#" title="account setting">
+                  <i class="fas fa-user"></i><span>account setting</span></a
+                >
+              </li>
+              <li>
+                <a href="#" title="message"
+                  ><i class="fas fa-envelope"></i><span>message</span></a
+                >
+              </li>
+              <li id="notifications">
+                <i class="fas fa-bell"><span id="notificationNumber">3</span></i
+                ><span>notifications</span>
+                <ul>
+                  <li><a href="#">one new friend request</a></li>
+                  <li><a href="#">Saksham posted on your wall</a></li>
+                  <li><a href="#">Ayush liked your post</a></li>
+                </ul>
+              </li>
+              <li>
+                <img src="images/user.png" alt="user" title="my account" /><span
+                  >my account</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="myprofile">
+        <article>
+          <h2>My Profile</h2>
+          <img src="images/user.png" alt="user" />
+          <ul>
+            <li><i class="fas fa-pencil-alt"></i>Student</li>
+            <li><i class="fas fa-home"></i>Mumbai, India</li>
+            <li><i class="fas fa-birthday-cake"></i>April 4, 1999</li>
+          </ul>
+        </article>
+        <article>
+          <ul>
+            <li
+              onclick="displayElement(document.getElementById('group'), 'display'); displayElement(this, 'newBackgroundColor');"
+            >
+              <i class="fas fa-circle-notch"></i>My Groups
+              <ul id="group">
+                <li>some group</li>
+              </ul>
+            </li>
+            <li
+              onclick="displayElement(document.getElementById('event'), 'display'); displayElement(this, 'newBackgroundColor');"
+            >
+              <i class="fas fa-calendar-check"></i>My Events
+              <ul id="event">
+                <li>some group</li>
+              </ul>
+            </li>
+            <li
+              onclick="displayElement(document.getElementById('photos'), 'grid'); displayElement(this, 'newBackgroundColor');"
+            >
+              <i class="fas fa-users"></i>My Photos
+              <ul id="photos">
+                <li><img src="images/picture1.jpg" alt="picture1" /></li>
+                <li><img src="images/picture2.jpg" alt="picture2" /></li>
+                <li><img src="images/picture3.jpg" alt="picture3" /></li>
+                <li><img src="images/picture4.jpg" alt="picture4" /></li>
+                <li><img src="images/picture5.jpg" alt="picture5" /></li>
+                <li><img src="images/picture6.jpg" alt="picture6" /></li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>interests</h3>
+          <ul id="interests">
+            <li>Arts</li>
+            <li>coding</li>
+            <li>cinema</li>
+            <li>photography</li>
+            <li>travels</li>
+            <li>food</li>
+            <li>design</li>
+            <li>cats</li>
+            <li>volunteering</li>
+            <li>books</li>
+            <li>Music</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Hey!</h3>
+          <span
+            ><i
+              class="fas fa-times"
+              onclick="displayElement(document.querySelectorAll('#myprofile article')[3], 'hide');"
+            ></i
+          ></span>
+          <p>People are looking at your profile. Find out who.</p>
+        </article>
+      </section>
+      <section id="mywall">
+        <article id="status">
+          <form action="" method="post">
+            <input
+              type="text"
+              name=""
+              id=""
+              maxlength="280"
+              placeholder="Status: Feeling Blue"
+            />
+            <button><i class="fas fa-pencil-alt"></i> Post</button>
+          </form>
+        </article>
+        <article>
+          <div class="presentation">
+            <img src="images/men.png" alt="man" />
+            <h3>Saksham Tikoo</h3>
+            <span>1 min</span>
+          </div>
+          <div class="publication">
+            <p>
+              At the world level also there exist extreme inequalities and disparities. The relationship between various nations of this so-called global village is marked with glaring economical, social and industrial inequalities and exploitation. The Third World nations, comprising the majority of the world’s population, are underdeveloped and backward.
+            </p>
+            <div>
+              <img src="images/image1.jpg" alt="image1" />
+              <img src="images/image2.jpg" alt="image2" />
+            </div>
+            <div class="interaction">
+              <button><i class="fas fa-thumbs-up"></i> Like</button>
+              <button><i class="fas fa-comment"></i> comment</button>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="presentation">
+            <img src="images/men.png" alt="Ayush" />
+            <h3>Ayush Pattnaik
+            </h3>
+            <span>16 min</span>
+          </div>
+          <div class="publication">
+            <p>
+              I seek new challenges and try to think out-of-the-box while looking for creative solutions to a given problem. Besides the details given in my resume, I believe in character, values, vision, and action. I am a quick learner and believe in learning from my mistakes for I strongly feel that this virtue will take me ahead in life and career.
+            </p>
+            <div></div>
+            <div class="interaction">
+              <button><i class="fas fa-thumbs-up"></i> Like</button>
+              <button><i class="fas fa-comment"></i> comment</button>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="presentation">
+            <img src="images/woman2.png" alt="Angie Jane" />
+            <h3>Angie Jane</h3>
+            <span>32 min</span>
+          </div>
+          <div class="publication">
+            <p>Have you seen this?</p>
+            <div>
+              <img src="images/image1.jpg" alt="image1" />
+            </div>
+            <p>
+              Latin Streets
+            </p>
+            <div class="interaction">
+              <button><i class="fas fa-thumbs-up"></i> Like</button>
+              <button><i class="fas fa-comment"></i> comment</button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="social">
+        <article>
+          <h4>Upcoming Events:</h4>
+          <img src="images/picture4.jpg" alt="image" />
+          <h5>Holiday</h5>
+          <p>Friday 15h00</p>
+          <button>Info</button>
+        </article>
+        <article>
+          <h4>Friend Request</h4>
+          <img src="images/user.png" alt="image" />
+          <p>Bhavya Mehta</p>
+          <button><i class="fas fa-times"></i></button>
+          <button class="check"><i class="fas fa-check"></i></button>
+        </article>
+        <article>
+          <p>ADS</p>
+        </article>
+        <article>
+          <img src="images/ladybug.png" alt="ladybug" />
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <p>Go Social</p>
+      </div>
+     
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
